@@ -27,9 +27,8 @@ addons:
 before_install:
   - export PATH=$HOME/.local/bin:$PATH
   - pip3 install --user $(whoami) --upgrade pip >/dev/null # pip3 -> pip
-  - pip install --user $(whoami) --upgrade docker-compose httpie >/dev/null 2>&1
-  - http --version --debug
-  - docker-compose -v
+  - pip install --user $(whoami) --upgrade httpie >/dev/null 2>&1
+  - http --version
   - source <(curl -fsSL https://raw.github.com/daggerok/bash-functions/master/main.bash)
   - stop_any 5432 5672 27017 8080 8000 8081 80 80
 before_script:

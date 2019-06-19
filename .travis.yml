@@ -50,6 +50,7 @@ jobs:
         - wait_for 8080
         - http :8080/employees name=Maksimko salary=999999
         - http :8080/employees name='Ololo Trololo' salary=-999
+        - http :8080/employees
         - stop_any 80 8080
     - stage: openjdk8
       jdk: openjdk8
@@ -65,6 +66,7 @@ jobs:
         - wait_for 8080
         - http :8080/employees name=Maksimko salary=999999
         - http :8080/employees name='Ololo Trololo' salary=-999
+        - http :8080/employees
         - stop_any 80 8080
     - stage: openjdk11
       jdk: openjdk11

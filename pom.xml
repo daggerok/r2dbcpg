@@ -32,7 +32,6 @@
     <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     <maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
-    <maven-javadoc-plugin.version>3.1.0</maven-javadoc-plugin.version>
     <maven-source-plugin.version>3.1.0</maven-source-plugin.version>
     <flyway-maven-plugin.version>5.2.4</flyway-maven-plugin.version>
     <!-- Flyway properties guides: -->
@@ -265,9 +264,6 @@
         <artifactId>maven-assembly-plugin</artifactId>
       </plugin>
       <plugin>
-        <artifactId>maven-javadoc-plugin</artifactId>
-      </plugin>
-      <plugin>
         <artifactId>maven-source-plugin</artifactId>
       </plugin>
     </plugins>
@@ -398,20 +394,6 @@
 
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <version>${maven-javadoc-plugin.version}</version>
-          <executions>
-            <execution>
-              <id>attach-javadocs</id>
-              <goals>
-                <goal>jar</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
           <version>${maven-source-plugin.version}</version>
           <executions>
@@ -428,14 +410,6 @@
   </build>
 
   <repositories>
-    <!--<repository>
-      <id>spring-snapshots</id>
-      <name>Spring Snapshots</name>
-      <url>https://repo.spring.io/snapshot</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>-->
     <repository>
       <id>spring-milestones</id>
       <name>Spring Milestones</name>
@@ -443,14 +417,6 @@
     </repository>
   </repositories>
   <pluginRepositories>
-    <!--<pluginRepository>
-      <id>spring-snapshots</id>
-      <name>Spring Snapshots</name>
-      <url>https://repo.spring.io/snapshot</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>-->
     <pluginRepository>
       <id>spring-milestones</id>
       <name>Spring Milestones</name>
